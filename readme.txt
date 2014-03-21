@@ -18,7 +18,7 @@ You go into WordPress and add a menu with a name of your choice. I chose "music"
 Now if you want somebody view the music menu you have the parameter http://www.example.com/?view=music.
 You can do this with every menu you have.
 
-So thats awesome as you have multiple menus which you can show different people. We tested it with twentytwelve and Genesis Framework. It might happen it is not 100% compatible with the theme, then you need to change line 67 to your menu.
+So thats awesome as you have multiple menus which you can show different people. We tested it with twentytwelve and Genesis Framework. It might happen it is not 100% compatible with your theme, then you need to change line 67 to your menu.
 
 In case you leave the GET Parameter empty nothing happen at all.
 
