@@ -3,7 +3,7 @@
 Plugin Name: GET Different Menus
 Plugin URI: http://www.wp-plugin-dev.com
 Description: Used to have different Menus by $_GET Parameter
-Version: 0.12
+Version: 0.13
 Author: wp-plugin-dev.com
 Author URI: http://www.wp-plugin-dev.com
 
@@ -49,9 +49,8 @@ $_SESSION['viewmenu']=$_GET['view'];
 add_filter( 'wp_nav_menu_items', 'get_different_custom_menu_item_according_to_get_parameter', 10, 2 );
 
 function get_different_custom_menu_item_according_to_get_parameter ( $items, $args ) {
-	
-    $the_nmo = wp_get_nav_menu_object($_SESSION['viewmenu']);
-    
+	$current_id=(int)$GLOBALS['post']->ID;
+    $the_nmo = wp_get_nav_menu_object($_SESSION['viewmenu']); 
     
     if ($the_nmo==""){}else{
     
@@ -63,8 +62,14 @@ function get_different_custom_menu_item_according_to_get_parameter ( $items, $ar
     if ($args->theme_location == 'primary') {
     
         foreach ($items_2 as $item){
-    
-        $items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a  href="'.$item->url.'">'.$item->title.'</a></li>';
+
+		$link_page_id = (int)($item->object_id);
+		
+	
+	if ($current_id == $link_page_id){$cur=" current-menu-item current_page_item";}else{$cur="";
+	} 
+  
+        $items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page'.$cur.'"><a  href="'.$item->url.'">'.$item->title.'</a></li>';
         
         }
         }

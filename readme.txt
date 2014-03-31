@@ -3,7 +3,7 @@ Contributors: theode
 Tags: primary, menu, custom
 Requires at least: 3.0
 Tested up to: 3.9
-Stable tag: 0.12
+Stable tag: 0.13
 License: GPLv2 or later
 
 Have different primary menus for different viewers.
@@ -11,16 +11,14 @@ Have different primary menus for different viewers.
 == Description ==
 
 I once thought I need different primary menus for different viewers.
-In best case those users have a GET parameter which decides which menu has to be shown.
+In best case those users have a GET paramter which decides which menu has to be shown.
 
 For Example: 
-You go into WordPress and add a menu with a name of your choice. I chose "music".
+You go into WordPress and add a menu with a name of your choice. I choosed "music".
 Now if you want somebody view the music menu you have the parameter http://www.example.com/?view=music.
 You can do this with every menu you have.
 
-So thats awesome as you have multiple menus which you can show different people. We tested it with twentytwelve and Genesis Framework. It might happen it is not 100% compatible with your theme, then you need to change line 67 to your menu.
-
-In case you leave the GET Parameter empty nothing happen at all.
+In case you leave it empty nothing happen at all.
 
 == Installation ==
 
@@ -36,4 +34,4 @@ Contact us at http://www.wp-plugin-dev.com/support-contact/
 
 == Changelog ==
 
-= 0.12 =  Initial release
+= 0.1 =  Initial release
